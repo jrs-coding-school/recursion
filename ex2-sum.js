@@ -8,6 +8,7 @@ tail - use rest operator (...) to return all but the first item in an array.
 */
 const sum = (acc, [head, ...tail]) =>
   typeof head === 'undefined' ? acc : sum(acc + head, tail)
+
 console.log('sum(0, [9000,900,90,9,1])  // =>', sum(0, [9000, 900, 90, 9, 1]))
 
 //  Awld Skool - Non ES6 way. sums the array but with more code
