@@ -6,11 +6,11 @@ head - Return the first item in an array.
        items. To do this, we make use of destructuring assignment.
 tail - use rest operator (...) to return all but the first item in an array.
 */
-const sum = (acc, [head, ...tail]) => (!head ? acc : sum(acc + head, tail))
-
+const sum = (acc, [head, ...tail]) =>
+  typeof head === 'undefined' ? acc : sum(acc + head, tail)
 console.log('sum(0, [9000,900,90,9,1])  // =>', sum(0, [9000, 900, 90, 9, 1]))
 
-//  Awld Skool
+//  Awld Skool - Non ES6 way. sums the array but with more code
 // function sum(acc, arr) {
 //   console.log('acc', acc, 'arr', arr)
 //   if (arr.length === 0) {
