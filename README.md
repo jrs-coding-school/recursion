@@ -67,13 +67,13 @@ Make sure the recursive functions that you write exhibit these 3 attributes.
 
 We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 x 8 x 8 = 512. Here 8 is the base and 3 is the exponent.
 
-```
-power(8,3) // => 512
+```js
+power(8, 3) // => 512
 ```
 
 We don't want to blow the stack or recurse over bad input. A termination condition stops program execution (`return`) if something bad happens, like a bad data value being provided to the function. Let's say a function should not accept a negative number as its argument, simply check for that condition and return if true:
 
-```
+```js
 const power = function(base, exp) {
   // A Termination Condition
   // this function will only work with non-negative integer exponents
@@ -90,7 +90,7 @@ The base case stops recursion just like the termination condition. However, the 
 
 In the case of our `power` function, once we’ve recursed to the point where the exponent value is down to zero, we have found the goal of the recursion in this case. We return a result of 1 from the function to the previous caller in the stack.
 
-```
+```js
 const power = function(base, exp) {
   if (exp < 0) {
     return
@@ -115,7 +115,7 @@ step 2) 4 _ power(4, 3 - 1) makes a recursive call and returns (4 _ 4) => 16 up 
 step 3) 4 _ power(4, 2 - 1) makes a recursive call and returns (4 \* 1) => 4 up the stack
 step 4) power(4, 2 - 1) => base case. recursion stops. the stack begins to unwind and 1 is returned up the stack.
 
-```
+```js
 const power = function(base, exp) {
   if (exp < 0) {
     return
@@ -136,8 +136,8 @@ const power = function(base, exp) {
 
   An call to factorial with a value of 5 should return 120:
 
-  ```
-  factorial(5)  // 120
+  ```js
+  factorial(5) // 120
   ```
 
 ## exercise 2
