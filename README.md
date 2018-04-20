@@ -63,7 +63,7 @@ blastoff
 
 Make sure the recursive functions that you write exhibit these 3 attributes.
 
-1. A Termination Condition
+1. a termination condition
 
 We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 \* 8 \* 8 = 512. Here 8 is the base and 3 is the exponent.
 
