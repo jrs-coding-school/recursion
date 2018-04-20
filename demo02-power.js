@@ -8,7 +8,7 @@ const power = function(base, exp) {
   }
 }
 
-console.log('power(4, 3) is: ', power(4, 3))
+console.log('power(8, 3) is: ', power(8, 3))
 //   power(4,3)
 //   returns 4 * (power(4, 2) = 16) => 64 final result
 //   returns 4 * (power(4, 1) = 4) => 16

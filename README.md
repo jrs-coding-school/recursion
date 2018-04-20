@@ -38,9 +38,8 @@ blastoff
 
 ## benefits of recursion
 
-* Recursion can make the code very simple for some problems
-* Ability to maintain state at different levels of recursion.
-* Leads to less code.
+* Typically leads to less code.
+* Recursion sometimes can make the code very simple for some problems
 * Ability to maintain state at different levels of recursion.
 
 ## call stack
@@ -51,8 +50,7 @@ blastoff
 * When a program calls a function, that function goes on top of the call stack. This similar to a stack of books.
 * You add things one at a time.
 * Ability to maintain state at different levels of recursion.
-* In other words, you can’t access a value within an item in the stack from another item in the stack.
-* Then, when you are ready to take something off (when the function call is completed), you always take off the top item in the stack.
+* When a function completes, the item is taken off the top of the stack.
 
 ## disadvantages of recursion
 
@@ -63,7 +61,7 @@ blastoff
 
 ## 3 key features of recursion
 
-Make sure the recursive functions that you write exhibit these 3 attributes. We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 2 would result in 8 x 8 = 64. Here 8 is the base and 2 is the exponent.
+Make sure the recursive functions that you write exhibit these 3 attributes. We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 _ 8 _ 8 = 512. Here 8 is the base and 3 is the exponent.
 
 1. A Termination Condition
 
