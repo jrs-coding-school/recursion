@@ -61,9 +61,15 @@ blastoff
 
 ## 3 key features of recursion
 
-Make sure the recursive functions that you write exhibit these 3 attributes. We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 x 8 x 8 = 512. Here 8 is the base and 3 is the exponent.
+Make sure the recursive functions that you write exhibit these 3 attributes.
 
 1. A Termination Condition
+
+We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 x 8 x 8 = 512. Here 8 is the base and 3 is the exponent.
+
+```
+power(8,3) // => 512
+```
 
 We don't want to blow the stack or recurse over bad input. A termination condition stops program execution (`return`) if something bad happens, like a bad data value being provided to the function. Let's say a function should not accept a negative number as its argument, simply check for that condition and return if true:
 
