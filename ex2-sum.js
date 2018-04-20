@@ -4,7 +4,10 @@
 head - Return the first item in an array.
        Is useful when you need to separate the first item from the rest of the array
        items. To do this, we make use of destructuring assignment.
-tail - use rest operator (...) to return all but the first item in an array.
+tail - use spread operator (...) to return all but the first item in an array.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
 */
 const sum = (acc, [head, ...tail]) =>
   typeof head === 'undefined' ? acc : sum(acc + head, tail)
