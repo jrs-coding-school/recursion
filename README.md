@@ -110,7 +110,7 @@ Below the recursion is happening in the following statement `return base * power
 
 Here's an attempt to explain what each call looks like on the stack to find the value of 4 to the power of 3. That is 4 \* 4 \* 4 = 64.
 
-* step 1) original call -- power(4,3) makes recursive call 4 \* power(4, 3 - 1) returns (4\*16) => 64
+* step 1) power(4,3) makes recursive call 4 \* power(4, 3 - 1) returns (4\*16) => 64
 * step 2) recursive call 4 \* power(4, 2 - 1) returns (4\*4) => 16
 * step 3) recursive call 4 \* power(4, 1 - 1) returns (4\*1) => 4.
 * step 4) exp === 0. base case. returns 1. recursion stops and the stack begins to unwind.
