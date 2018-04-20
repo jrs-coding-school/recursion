@@ -65,7 +65,7 @@ Make sure the recursive functions that you write exhibit these 3 attributes.
 
 1. A Termination Condition
 
-We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 x 8 x 8 = 512. Here 8 is the base and 3 is the exponent.
+We'll use an example of a recursive function named `power` to compute the exponent of a number. The exponent of a number says how many times the base number is used as a factor. A base number of 8 to the power of 3 would result in 8 \* 8 \* 8 = 512. Here 8 is the base and 3 is the exponent.
 
 ```js
 power(8, 3) // => 512
@@ -108,12 +108,12 @@ You recurse by having the function call itself. Each time we recurse, we place a
 
 Below the recursion is happening in the following statement `return base * power(base, exp - 1)`. We're calling the `power` function passing the `base` number and the current exponent value minus 1. Each time we recursively call the function, the call is placed onto the stack. The recursion repeats until we reach the base case where an exponent value of 1 is returned to the previous caller in the stack where the value of 1 is then multiplied the base number and the result is returned to the previous call in the stack which in turn multiplies the base by the result, and so on. The process repeats until there are no more calls left on the stack and the final result is returned.
 
-Here's an attempt to explain what each call looks like on the stack to find the value of 4 to the power of 3. That is 4 _ 4 _ 4 = 64.
+Here's an attempt to explain what each call looks like on the stack to find the value of 4 to the power of 3. That is 4 \* 4 \* 4 = 64.
 
-step 1) original call -- power(4,3) makes recursive call and returns 4 _ 16 => 64
-step 2) 4 _ power(4, 3 - 1) makes a recursive call and returns (4 _ 4) => 16 up the stack
-step 3) 4 _ power(4, 2 - 1) makes a recursive call and returns (4 \* 1) => 4 up the stack
-step 4) power(4, 2 - 1) => base case. recursion stops. the stack begins to unwind and 1 is returned up the stack.
+* step 1) original call -- power(4,3) makes recursive call and returns 4 \_ 16 => 64
+* step 2) 4 \_ power(4, 3 - 1) makes a recursive call and returns (4 \* 4) => 16 up the \* stack
+* step 3) 4 \_ power(4, 2 - 1) makes a recursive call and returns (4 \* 1) => 4 up the stack
+* step 4) power(4, 2 - 1) => base case. recursion stops. the stack begins to unwind and 1 is returned up the stack.
 
 ```js
 const power = function(base, exp) {
