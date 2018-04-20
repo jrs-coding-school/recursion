@@ -132,7 +132,7 @@ const power = function(base, exp) {
 * Write a recursive function to calculate the factorial of a number.
 * Name the function `factorial`.
 
-  5! = 5 _ 4 _ 3 _ 2 _ 1.
+  5! = 5 \* 4 \* 3 \* 2 \* 1.
 
   An call to factorial with a value of 5 should return 120:
 
